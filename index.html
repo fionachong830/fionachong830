@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RGKVVSBL4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7RGKVVSBL4');
+        </script>
+        
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Lato", sans-serif;
+            }
+
+            body,
+            html {
+                height: 100%;
+                color: #777;
+                line-height: 1.8;
+            }
+
+            /* Create a Parallax Effect */
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* First image (Logo. Full height) */
+            .bgimg-1 {
+                background-image: url('https://www.w3schools.com/w3images/parallax1.jpg');
+                min-height: 100%;
+            }
+
+            /* Second image (Portfolio) */
+            .bgimg-2 {
+                background-image: url("https://www.w3schools.com/w3images/parallax2.jpg");
+                min-height: 400px;
+            }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+                min-height: 400px;
+            }
+
+            .w3-wide {
+                letter-spacing: 10px;
+            }
+
+            .w3-hover-opacity {
+                cursor: pointer;
+            }
+
+            /* Turn off parallax scrolling for tablets and phones */
+            @media only screen and (max-device-width: 1600px) {
+
+                .bgimg-1,
+                .bgimg-2,
+                .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="#Education" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> EDUCATION</a>
+            <a href="#Work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> WORK</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#education" class="w3-bar-item w3-button" onclick="toggleFunction()">EDUCATION</a>
+            <a href="#work" class="w3-bar-item w3-button" onclick="toggleFunction()">WORK</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Fiona <span
+                    class="w3-hide-small">Chong</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center"><em>I love Programming and Mathematics.❤️</em></p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Fiona</b></p><br>
+                <img src="fiona.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
+                    width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am Fiona. I am from CityU SCOPE. I am a year 2 student.I am studying 
+                    information technology for business which is a 3-year degree of Coventry University. I enjoy 
+                    discovering how the programme work.</p>
+            </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">I am good at:</p>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Python</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>MySQL</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>HTML</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%">60%</div>
+        </div>
+    </div>
+
+
+    <div class="w3-content w3-container w3-padding-64" id="Education">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>DSE Result</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021</h6>
+          <p>Chinese Language-Level 2</br>English Language-Level 3</br>Mathematics-Level 5*</br>M1-Level 5</br>Liberal Studies-Level 2</br>
+          Information Technology-Level 4</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Hong Kong True Light College</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2021</h6>
+          <p>High School</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>CityU SCOPE Coventry University</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - (2024)</h6>
+          <p>Bachelor of Science Information Technology for Business</p>Current GPA: 3.35</p><br>
+          <hr>
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="Work">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Working Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Tricor Services Limited</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7-2022 to Now</h6>
+          <p>Intern (PMO and Transformation)
+          </br><b>Participated in two projects as a business analyst</b>
+          </br>Project Sunshine R2 (HRIS system) and Project FINI (IPO MS)
+          </br> - Draft UAT test cases and guide users to participate in UAT 
+          </br> - Participating in internal & external meetings and requirement workshops
+          </br><b>Participated in one project as a PM & BA</b>
+          </br>Project Sunshine R2 enhancement (Audit Log)
+          </br> - Draft business requirement document (BRD)
+          </br> - Design and manage project timeline 
+          </p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>I.T Appeals Limited</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>8-2021 to 10-2021</h6>
+          <p>Part-time clerk (HR department)</p>
+          <hr>
+        </div>
+    </div>
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">ABOUT MY SEM2</h3>
+        <p>In my sem 2, I studied 3 modules </p>
+            1)119COM which is mainly about the current technology</p>
+            2)121COM which is mainly about python</p>
+            3)126COM which is mainly about accounting and business analytics methods</p>
+        <h3 class="w3-center">About 121COM</h3>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>Week 1</br>I started to download eclipse and try to explore this new platform. 
+                </br>Week 2</br>I learned how to use with tkinker to make different figures like taichi, circles with different colors. 
+                </br>Week 3</br>I learned how to use bubblesort. Also, I downloaded xampp and try to explore HTML and use python in making HTML.
+                </br>Week 4</br>I know more about my group project and test data in SBapp.
+                </br>Week 5</br>I know how to use HTML to show loantable data.
+                </br>Week 6</br>I know how to use XML file in python.
+            </p><br>
+            </div>
+
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p></br>Week 7</br>I know more about class and the function of it.
+                </br>Week 8</br>I know more about OOP.
+                </br>Week 9</br>I know more about Recusive Function.
+                </br>Week 10</br>I know more about unitest.
+                </br>Week 11</br>I know more about testing and exceptional handling.
+                </br>Week 12</br>
+                </p>
+            </div>
+        </div>
+        <h3 class="w3-center">About 126COM</h3>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>Week 1</br>I learned what is Management and Fiancial Accounting.
+                </br>Week 2</br>I learned what is a balance sheet.
+                </br>Week 3</br>I learned what is a income statement.
+                </br>Week 4</br>I learned what is a cash flow statement.
+                </br>Week 5</br>I learned what is a break-even analysis.
+                </br>Week 6</br>I learned about different Fiancial Ratios.
+            </p><br>
+            </div>
+
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p></br>Week 7</br>I learned about how to measure data.
+                </br>Week 8</br>I learned what is a decsion tree.
+                </br>Week 9</br>I learned about Normal Distribution.
+                </br>Week 10</br>I learned about Linear Regression and Correlation.
+                </br>Week 11</br>
+                </br>Week 12</br>
+                </p>
+            </div>
+        </div>
+        
+        <h3 class="w3-center">MY Homework in ITB</h3>
+        <p class="w3-center"><em>Here are some of my work in ITB DIDF and SEM 2.<br> Click on the images to make
+                them bigger</em></p><br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="SBapp.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="SBapp.py">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="grade.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="grade.py">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="bmw.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="bmw.py">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="classDiagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="class diagram">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="taichi.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Taichi">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="printbiga.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="print a big a">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="datafile2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="datafile2.dat">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="loantable.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="loantable.py">
+            </div>
+            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Aberdeen,HK<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone:+852 54834948<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+                    fionachong830@gmail.com<br>
+                </div>
+                <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+    <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+    <!-- Footer end. -->
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
